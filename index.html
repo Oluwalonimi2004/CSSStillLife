@@ -1,81 +1,238 @@
 <style>
-  
-  * { box-sizing: border-box; }
-  
+  * {
+    box-sizing: border-box;
+  }
+
   body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url('https://i.pinimg.com/736x/f2/0e/f0/f20ef06d497105a0a2386706106cf657.jpg');
     height: 100vh;
     margin: 0;
   }
-	
+
   .frame {
+    display: flex;
+    align-items: flex-end;
+    gap: 95px;
     position: relative;
     width: 500px;
     height: 500px;
     border: 1px solid black;
   }
-  
+
   .cup {
-    width: 100px;
-    height: 100px; 
+    width: 90px;
+    height: 80px;
     background-color: white;
     border: 1px solid black;
     border-radius: 0% 0% 19% 21% / 10% 10% 39% 36%;
-   
-    background-size: 100% 100%, 100% 41%;
-    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%), linear-gradient(180deg, rgba(22,14,199,1) 50%, white 50%);  
-      
 
+    background-size: 100% 100%, 100% 41%;
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, rgba(22, 14, 199, 1) 50%, white 50%);
+
+
+
+  }
+.cup-cup {
+    position: absolute;
+    left: 210px;
+    bottom: 410px;
+    border-radius: 0% 0% 19% 21% / 10% 10% 39% 36%;
+  }
+  .cup-handle {
+    position: absolute;
+    left: 299px; 
+    bottom: 430px;
+    width: 40px;
+    height: 60px;
+    border: 7px solid white;  
+    border-radius: 25%;  
+    border-left: none;  
+    background: transparent;   
   }
   
   .top-cup {
     position: absolute;
     left: 300px;
-    bottom: 300px;
+    bottom: 279px;
     border-radius: 0% 0% 19% 21% / 10% 10% 39% 36%;
   }
-  
+
   .bottom-cup {
     position: absolute;
     left: 300px;
     bottom: 199px;
-    border-radius: 0% 0% 19% 21% / 10% 10% 39% 36% 
+    border-radius: 0% 0% 19% 21% / 10% 10% 39% 36%
   }
+
   .triangle {
     background: red;
-    width: 100%;
+    width: 90%;
     height: 100%;
-    clip-path: polygon( 55% 53%, 0 0, 0 100%);
-    transform: translate( 42px, 0);
-    
+    clip-path: polygon(55% 53%, 0 0, 0 100%);
+    transform: translate(42px, 0);
+
   }
-  
-  .star { 
+
+  .star {
     width: 30%;
     height: 30%;
     background: white;
-    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); 
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
     transform: translate(4px, 32px) scale(0.9);
   }
 
-  
+
+  .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .moka-pot {
+    position: relative;
+    width: 100px;
+    height: 200px;
+  }
+
+
+  .base {
+    width: 80px;
+    height: 70px;
+    background: silver;
+    position: absolute;
+    bottom: 200px;
+    left: -90px;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+    border: 2px solid;
+  }
+
+
+  .middle {
+    width: 90px;
+    height: 15px;
+    background: gray;
+    position: absolute;
+    bottom: 270px;
+    left: -95px;
+    border-radius: 5px;
+  }
+
+
+  .top {
+    width: 100px;
+    height: 90px;
+    background: orange;
+    position: absolute;
+    bottom: 285px;
+    left: -100px;
+    clip-path: polygon(10% 100%, 90% 100%, 100% 0%, 0% 0%);
+    border: 2px solid #666;
+  }
+
+
+  .lid {
+    width: 90px;
+    height: 20px;
+    background: silver;
+    position: absolute;
+    bottom: 375px;
+    left: -95px;
+    clip-path: polygon(10% 100%, 90% 100%, 80% 0%, 20% 0%);
+    border: 2px solid #666;
+  }
+
+
+  .knob {
+    width: 10px;
+    height: 10px;
+    background: black;
+    position: absolute;
+    bottom: 395px;
+    left: -55px;
+    border-radius: 50%;
+  }
+
+
+  .canister {
+    width: 140px;
+    height: 200px;
+    background: yellow;
+    border: 4px solid red;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+    font-family: sans-seri;
+    z-index: 1;
+  }
+
+  .canister:before {
+    content: "CAFÉ BUSTELO";
+    position: absolute;
+    top: 50px;
+    left: 5px;
+    font-size: 20px;
+    color: black;
+  }
+
+  .lid-c {
+    width: 150px;
+    height: 15px;
+    background: yellow;
+    position: absolute;
+    top: -15px;
+    left: -8px;
+    border-radius: 10px;
+  }
+  .red-stripe {
+    width: 100%;
+    height: 45px;
+    background: red;
+    position: absolute;
+    top: 150px;  
+    left: 0;
+  }
 </style>
 
-
 <div class="frame">
+  <div class="cup cup-cup"></div>
+  <div class="cup-handle"></div>
   <div class="cup top-cup">
     <div class="triangle">
-         <div class="star">
-         </div>  
+      <div class="star">
+      </div>
     </div>
   </div>
   <div class="cup bottom-cup">
-  <div class="triangle">
-         <div class="star">
-         </div>  
+    <div class="triangle">
+      <div class="star">
+      </div>
     </div>
   </div>
   <div class="cup"></div>
+  <div class="container">
+    <div class="canister">
+      <div class="lid-c"></div>
+        <div class="lid-c"></div>
+    <div class="red-stripe">
+      </div>
+    </div>
+
+    <div class="coffee-pot">
+      <div class="lid-pot"></div>
+      <div class="spout"></div>
+      <div class="handle"></div>
+    </div>
+    <div class="moka-pot">
+      <div class="base"></div>
+      <div class="middle"></div>
+      <div class="top"></div>
+      <div class="lid"></div>
+      <div class="knob"></div>
+    </div>
+  </div>
 </div>
